@@ -1,0 +1,18 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.*;
+import java.time.Instant;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/api/test")
+public class PingController {
+
+    @GetMapping("/ping")
+    public Map<String, Object> ping() {
+        return Map.of(
+            "status", "OK",
+            "timestamp", Instant.now().toString()
+        );
+    }
+}
