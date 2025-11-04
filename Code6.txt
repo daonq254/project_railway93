@@ -1,7 +1,17 @@
-Code6.txt
-Code6.txt
-Code6.txt
-Code6.txt
-Code6.txt
-Code6.txt
-Code6.txt
+import java.util.Scanner;
+
+public class HelloUser {
+    public static void main(String[] args) {
+        // Tạo đối tượng Scanner để nhập dữ liệu từ bàn phím
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhập tên của bạn: ");
+        String name = scanner.nextLine();  // Nhập chuỗi từ người dùng
+
+        // In ra lời chào
+        System.out.println("Xin chào, " + name + "! Chúc bạn một ngày tốt lành 😊");
+
+        // Đóng Scanner để tránh rò rỉ tài nguyên
+        scanner.close();
+    }
+}
